@@ -18,7 +18,7 @@ precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 
 # Enable checking for changes in git
-zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' check-for-staged-changes true
 
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
@@ -35,10 +35,8 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
 zstyle ':vcs_info:git:*' stagedstr "*"
 
-zstyle ':vcs_info:git:*' unstagedstr "*"
-
 # Apply color to vcs_info output
-zstyle ':vcs_info:git:*' formats "%F{1}%b%F{9}%c%u%m%{$reset_color%}"
+zstyle ':vcs_info:git:*' formats "%F{1}%b%F{9}%c%m%{$reset_color%}"
 
 # Show only the current directory or `~` in green
 relativeHome="%F{2}%(4~|~|%1~)%{$reset_color%}"
