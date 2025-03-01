@@ -20,6 +20,10 @@ setopt prompt_subst
 # Enable checking for changes in git
 zstyle ':vcs_info:*' check-for-changes true
 
+zstyle ':vcs_info:*' stagedstr "test1"
+
+zstyle ':vcs_info:*' unstagedstr "test2"
+
 # Apply color to vcs_info output
 zstyle ':vcs_info:git:*' formats "%F{1}%b%F{9}%u%{$reset_color%}"
 
