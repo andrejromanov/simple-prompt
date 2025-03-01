@@ -25,7 +25,7 @@ zstyle ':vcs_info:git:*' stagedstr "*"
 zstyle ':vcs_info:git:*' unstagedstr "test2"
 
 # Apply color to vcs_info output
-zstyle ':vcs_info:git:*' formats "%F{1}%b%F{9}%c%u%{$reset_color%}"
+zstyle ':vcs_info:git:*' formats "%F{1}%b%F{9}%u%c%u%{$reset_color%}"
 
 # Show only the current directory or `~` in green
 relativeHome="%F{2}%(4~|~|%1~)%{$reset_color%}"
