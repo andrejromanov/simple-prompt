@@ -20,7 +20,7 @@ setopt prompt_subst
 # Enable checking for changes in git
 zstyle ':vcs_info:*' check-for-changes true
 
-zstyle ':vcs_info:git:*' stagedstr "test1"
+zstyle ':vcs_info:git:*' stagedstr "*"
 
 zstyle ':vcs_info:git:*' unstagedstr "test2"
 
