@@ -20,16 +20,6 @@ setopt prompt_subst
 # Enable checking for changes in git
 zstyle ':vcs_info:*' check-for-changes true
 
-# Hook to check for uncommitted changes (untracked, modified, staged)
-+vi-git-untracked() {
-  if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) == 'true' ]]; then
-    if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
-      hook_com[staged]+='*'  # Add a star if any changes exist
-    fi
-  fi
-}
-zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-
 # Apply color to vcs_info output
 zstyle ':vcs_info:git:*' formats "%F{1}%b%F{9}%u%{$reset_color%}"
 
